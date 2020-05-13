@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://sto-rank.com/sitemap.xml
+Host: https://sto-rank.com
