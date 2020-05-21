@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{RXBc:function(e,t,n){"use strict";n.r(t);n("q1tI");var c=n("TJpk"),r=n("qKvR");t.default=function(){return Object(r.b)(c.Helmet,{defer:!1},Object(r.b)("meta",{"http-equiv":"refresh",content:"0; URL='/kyiv/remont-akpp'"}),Object(r.b)("link",{rel:"canonical",href:"/kyiv/remont-akpp"}))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-889bd7cce2682dc6d0bb.js.map
