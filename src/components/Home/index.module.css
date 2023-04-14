@@ -1,0 +1,138 @@
+@value mediaWidthLg: 1000px;
+@value mediaWidthMd: 700px;
+
+.home {
+  height: 100%;
+  color: white;
+  background-color: #c3c3c3;
+  padding-top: 0;
+  transition: .1s;
+  transition-delay: .3s;
+}
+
+/* Active state start */
+
+.home.active {
+  padding-top: 300px;
+}
+
+.home.active .title {
+  font-size: 100px;
+}
+
+.home.active .menu {
+  font-size: 50px;
+}
+/* Active state end */
+
+/* Right side bar state start */
+
+.home.rightSidebarMode {
+  padding: 20px 20px;
+  transition: 0s;
+}
+
+.home.rightSidebarMode .title {
+  padding-left: 0;
+  padding-right: 0;
+  transition: 0s;
+}
+
+.home.rightSidebarMode .menu {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 14px;
+  transition: 0s;
+}
+
+.home.rightSidebarMode .menuItem {
+  margin-top: 5px;
+}
+
+/* Right side bar state end */
+
+.home .title {
+  font-size: 50px;
+  letter-spacing: 8px;
+  font-style: italic;
+  text-transform: uppercase;
+  transition: .1s;
+  transition-timing-function: linear;
+  width: 100%;
+  display: flex;
+  transition-delay: .3s;
+  padding: 50px 30px 30px;
+  box-sizing: border-box;
+}
+
+.home .title img {
+  margin-left: auto;
+  transition: .1s linear;
+  transition-delay: .3s;
+  width: 100%;
+}
+
+.menu {
+  font-size: 20px;
+  transition: .1s;
+  transition-delay: .3s;
+  transition-timing-function: linear;
+  padding: 0 50px;
+  letter-spacing: 8px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: right;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.menu .menuItem {
+  cursor: pointer;
+  position: relative;
+
+}
+
+.menuItemActive {
+  color: var(--color-yellow);
+  transition: color 1s;
+  transition-delay: .2s;
+  cursor: default !important;
+}
+
+/* Media start */
+
+@media (max-width: mediaWidthLg) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .home.active, .home {
+    padding-top: 0;
+  }
+
+  .home .title img {
+    max-width: 400px;
+  }
+  
+  .home .title, .home.active .title {
+    padding: 5px 15px 15px;
+    transition-delay: 0s;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .home .menu, .home.active .menu {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .home .menu {
+    padding: 0 25px;
+  }
+}
+
+/* Media end */

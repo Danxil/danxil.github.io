@@ -1,0 +1,78 @@
+@value mediaWidth: 1000px;
+@value: myExperienceSidebarWidth: 300px;
+@value: homeScreenMediaHeight: 150px;
+
+:root {
+  --color-yellow: #f6ff88;
+  --base-font-size: 12px;
+  --base-letter-spacing: 2px;
+}
+
+.app {
+  text-align: center;
+  height: 100%;
+}
+
+.homeScreen {
+  width: 100%;
+  height: 100%;
+  transition: .3s;
+}
+
+.homeScreenRightSidebar {
+  width: myExperienceSidebarWidth;
+  transition: 0s;
+}
+
+.myCodeScreen {
+  transition: .3s;
+  /* Temp fix, negative value of css variable not work */
+  margin-right: calc(myExperienceSidebarWidth * -1);
+  height: 100%;
+}
+
+.myCodeScreenActive {
+  margin-right: 0;
+}
+
+.experienceScreen {
+  transition: .2s;
+  height: 100%;
+  margin-left: calc(-100% + myExperienceSidebarWidth);
+  min-width: calc(100% - myExperienceSidebarWidth);
+  max-width: calc(100% - myExperienceSidebarWidth);
+}
+
+.experienceScreenActive {
+  margin-left: 0;
+}
+
+@media (max-width: mediaWidth) {
+  .homeScreen {
+    height: auto;
+    min-height: homeScreenMediaHeight;
+    max-height: homeScreenMediaHeight;
+  }
+
+  .homeScreenActive {
+    min-height: 100%;
+    height: 100%;
+  }
+
+  .experienceScreen {
+    transition: .2s;
+    margin-left: 0;
+    min-width: auto;
+    max-width: 100%;
+    min-height: 0;
+    max-height: 0;
+    transform: translateY(-100%);
+    overflow: hidden;
+  }
+
+  .experienceScreenActive {
+    min-height: calc(100% - homeScreenMediaHeight);
+    max-height: calc(100% - homeScreenMediaHeight);
+    transform: translateY(0);
+  }
+}

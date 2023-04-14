@@ -1,0 +1,187 @@
+@value skewxdeg: 335deg;
+@value mediaWidthLg: 1000px;
+@value mediaWidthMd: 700px;
+
+.experienceItem {
+    text-align: right;
+    padding-bottom: 40px;
+}
+
+.companyTitle {
+    background: #f6ff88;
+    font-style: italic;
+    color: white;
+    margin-right: -20px;
+    margin-left: 10%;
+    padding: 4px 20px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 12px;
+    font-size: 23px;
+}
+
+.date {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.date span {
+    background: #f6ff88;
+    color: black;
+    margin-top: -14px;
+    position: relative;
+    top: -23px;
+    right: -20px;
+    padding: 6px 10px;
+    padding-right: 40px;
+    font-size: 9px;
+    box-sizing: border-box;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.project {
+    margin-top: 50px;
+}
+
+.projectTitle {
+    background: #000000;
+    color: white;
+    margin-right: -20px;
+    padding: 14px 20px;
+    text-align: right;
+    display: inline-block;
+    align-items: center;
+}
+
+.role {
+    font-size: 20px;
+    color: var(--color-yellow);
+    font-style: italic;
+    letter-spacing: -1px;
+    margin-right: 50px;
+    position: relative;
+    text-align: center;
+}
+
+.role::before {
+    font-style: normal;
+    content: '';
+    display: block;
+    position: absolute;
+    top: -40px;
+    bottom: -40px;
+    right: -30px;
+    background-color: white;
+    font-weight: bold;
+    width: 9px;
+    /* transform: skewx(calc(skewxdeg * -1)); */
+}
+
+.separator {
+    margin: 0 20px;
+}
+
+.projectName {
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.projectContent {
+    text-align: left;
+}
+
+.tags {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.tag {
+    margin-left: 12px;
+    padding: 5px 10px;
+    position: relative;
+    font-size: 12px;
+}
+
+.tag::before {
+    display: block;
+    content: '';
+    background-color: blue;
+    transform: skewx(skewxdeg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.tagText {
+    position: relative;
+    font-weight: bold;
+    color: white;
+}
+
+.description {
+    font-style: italic;
+    letter-spacing: var(--base-letter-spacing);
+}
+
+.responsibilitiesTitle {
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.responsibilities {
+    margin-top: 30px;
+}
+
+.responsibilitiesList {
+    margin-top: 20px;
+}
+
+.responsibility {
+    letter-spacing: 2px;
+    line-height: 30px;
+    position: relative;
+    font-size: 13px;
+    margin-top: -12px;
+}
+
+@media (max-width: mediaWidthLg) {
+    .projectTitle {
+        display: flex;
+        align-items: center;
+    }
+
+    .role {
+        font-size: 20px;
+        min-width: 100px;
+    }
+
+    .role::before {
+        top: -50px;
+        bottom: -50px;
+    }
+
+    .projectName {
+        font-size: 18px;
+    }
+
+    .tags {
+        flex-wrap: wrap;
+        row-gap: 12px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .responsibility {
+        line-height: 20px;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+}

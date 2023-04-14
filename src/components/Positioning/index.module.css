@@ -1,0 +1,13 @@
+@value mediaWidthLg: 1000px;
+@value mediaWidthMd: 700px;
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+@media (max-width: mediaWidthLg) {
+  .container {
+    flex-direction: column;
+  }
+}

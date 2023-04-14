@@ -1,0 +1,13 @@
+@value mediaWidthLg: 1000px;
+
+.portfolio {
+  text-align: center;
+  height: 100%;
+}
+
+.casesList {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: right;
+}

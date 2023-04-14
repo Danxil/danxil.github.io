@@ -1,0 +1,1 @@
+export const HOME_PRESENT_DELAY = 500;
