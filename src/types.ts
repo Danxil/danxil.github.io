@@ -24,12 +24,10 @@ export type ExperienceType = {
 }
 
 export type SkillsType = {
-    main: {
-        [key: string]: string[]
-    },
-    second: {
-        [key: string]: string[]
-    }
+    [key: string]: {
+        groupName: 'string',
+        skills: string[]
+    }[]
 }
 
 export type MetaType = {

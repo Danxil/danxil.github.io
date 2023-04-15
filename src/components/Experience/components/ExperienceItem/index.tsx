@@ -6,6 +6,7 @@ import { ExperienceType } from '../../../../types';
 import { client } from '../../../../utils/sanityClient';
 import styles from './index.module.css'
 import React from 'react';
+import { getScrollId } from '../../../../utils';
 
 const builder = imageUrlBuilder(client)
 
@@ -38,7 +39,7 @@ const ExperienceItem = ({ data: { company, projects } }: ExperienceItemType, ref
 
     useImperativeHandle(ref, () => {
         return {
-            id: company.toLowerCase().replace(' ', '_'),
+            id: getScrollId(company),
             scrollIntoView: () => divRef.current?.scrollIntoView({ behavior: 'smooth' }),
         };
     });

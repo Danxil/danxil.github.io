@@ -1,0 +1,1 @@
+export const getScrollId = (company: string) => company.toLowerCase().replace(' ', '_')
