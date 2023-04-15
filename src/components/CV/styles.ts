@@ -47,7 +47,7 @@ const styles: { [key: string]: CSSProperties } = {
         fontStyle: 'italic'
     },
     companyTitle: {
-        fontSize: '16px',
+        fontSize: '13px',
         fontWeight: 'bold',
         textAlign: 'right'
     },
@@ -55,7 +55,7 @@ const styles: { [key: string]: CSSProperties } = {
         fontStyle: 'italic',
         fontSize: '10px',
         textAlign: 'right',
-        marginTop: '2px'
+        marginTop: '-2px'
     },
     role: {
         fontWeight: 'bold',
@@ -91,9 +91,10 @@ const styles: { [key: string]: CSSProperties } = {
         marginTop: '30px'
     },
     skillsBlock: {
-        marginTop: '15px',
+        marginTop: '12px',
         display: 'flex',
-        gap: '5px',
+        columnGap: '5px',
+        rowGap: '4px',
         flexWrap: 'wrap',
         color: 'white',
     },
@@ -107,6 +108,7 @@ const styles: { [key: string]: CSSProperties } = {
     education: {
         wordBreak: 'break-word',
         fontSize: '10px',
+        marginTop: '20px',
     }
 }
 
