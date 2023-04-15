@@ -5,12 +5,13 @@ import Home, { MenuItemType } from './components/Home';
 import Positioning from './components/Positioning';
 import { ElementType } from './components/Positioning/types';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { CaseType, ExperienceType, PageType } from './types';
+import { CaseType, ExperienceType, MetaType, PageType, SkillsType } from './types';
 import { client } from './utils/sanityClient';
 import Experience from './components/Experience';
 import clsx from 'clsx';
 import { getActivePage, setActivePage } from './utils/ulrManager';
 import { HOME_PRESENT_DELAY } from './constants';
+import CV from './components/CV';
 
 const currentPage = getActivePage();
 
@@ -28,6 +29,18 @@ function App() {
 
   const { data: experienceData } = useQuery<ExperienceType[]>("experience", async () => {
     const result = await client.fetch('*[_type == "experience"] | order((projects | order(startDate desc)[0]).startDate desc)');
+
+    return result;
+  });
+
+  const { data: slillsData } = useQuery<SkillsType>("skills", async () => {
+    const result = await client.fetch('*[_type == "skills"][0]');
+
+    return result;
+  });
+
+  const { data: metaData } = useQuery<MetaType>("meta", async () => {
+    const result = await client.fetch('*[_type == "meta"][0]');
 
     return result;
   });
@@ -107,12 +120,19 @@ function App() {
 
 
   useEffect(() => {
+    if (currentPage.page === 'cv') return;
+
     setTimeout(() => {
       if (currentPage.page === 'experience') goToMyExperience();
       else goToMyCode();
       
     }, HOME_PRESENT_DELAY)
   }, []);
+
+  if (currentPage.page === 'cv') {
+    if (!experienceData || !slillsData || !metaData) return null;
+    else return <CV experience={experienceData || []} skills={slillsData}  meta={metaData} />;
+  }
 
   return (
       <div className={styles.app}>

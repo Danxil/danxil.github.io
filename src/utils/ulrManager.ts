@@ -18,6 +18,7 @@ export const getActivePage = (): ActivePageType => {
     switch (path) {
         case 'experience': 
         case 'code':
+        case 'cv':
             return { page: path, ...( scrollTo ? { params: { scrollTo } } : {})};
         default:
             return { page: 'home' }

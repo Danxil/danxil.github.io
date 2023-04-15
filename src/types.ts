@@ -1,4 +1,4 @@
-export type PageType = 'experience' | 'code' | 'home';
+export type PageType = 'experience' | 'code' | 'home' | 'cv';
 
 export type CaseType = {
     _id: string;
@@ -21,4 +21,19 @@ export type ExperienceType = {
         description: [];
     }[];
     description: [];
+}
+
+export type SkillsType = {
+    main: {
+        [key: string]: string[]
+    },
+    second: {
+        [key: string]: string[]
+    }
+}
+
+export type MetaType = {
+    summary: [],
+    lookingFor: []
+    education: []
 }

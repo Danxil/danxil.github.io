@@ -1,0 +1,20 @@
+.bg {
+    background-color: gray;
+    padding: 50px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 816px;
+    height: 1056px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+}
+
+.summary {
+    font-size: 11px;
+}
