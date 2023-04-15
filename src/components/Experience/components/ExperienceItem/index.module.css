@@ -10,7 +10,7 @@
 .companyTitle {
     background: #f6ff88;
     font-style: italic;
-    color: white;
+    color: var(--bg-yellow-text-collor);
     margin-right: -20px;
     margin-left: 10%;
     padding: 4px 20px;
@@ -125,6 +125,8 @@
 .description {
     font-style: italic;
     letter-spacing: var(--base-letter-spacing);
+    margin-top: -20px;
+    margin-bottom: 20px;
 }
 
 .responsibilitiesTitle {

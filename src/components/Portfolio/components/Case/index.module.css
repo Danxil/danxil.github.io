@@ -96,7 +96,7 @@
 
 .content h2 {
   background-color: var(--color-yellow);
-  color: black;
+  color: var(--bg-yellow-text-collor);
   margin-left: 100px;
   margin-right: -100px;
   font-style: italic;

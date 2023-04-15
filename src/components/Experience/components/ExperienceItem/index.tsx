@@ -60,14 +60,14 @@ const ExperienceItem = ({ data: { company, projects } }: ExperienceItemType, ref
                             <div className={styles.date}>
                                 <span>{`${moment(startDate).format(DATE_FORMAT)} - ${moment(endDate).format(DATE_FORMAT)}`}</span>
                             </div>
-                            <div className={styles.tags}>
-                                {tags?.map(tag => <div key={tag} className={styles.tag}><span className={styles.tagText}>{tag}</span></div>)}
-                            </div>
                             <div className={styles.description}>
                                 <PortableText
                                     value={description}
                                     components={portableTextComponents}
                                 />
+                            </div>
+                            <div className={styles.tags}>
+                                {tags?.map(tag => <div key={tag} className={styles.tag}><span className={styles.tagText}>{tag}</span></div>)}
                             </div>
                             <div className={styles.responsibilities}>
                                 <span className={styles.responsibilitiesTitle}>Responsibilities:</span>
