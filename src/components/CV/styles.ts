@@ -3,7 +3,7 @@ import { CSSProperties } from "react";
 const BORDER_COLOR = '#d9d9d9'
 
 const styles: { [key: string]: CSSProperties } = {
-    bg: { backgroundColor: 'gray', padding: '50px', overflowY: 'auto', height: '100%', boxSizing: 'border-box' },
+    bg: { backgroundColor: 'gray', padding: '0 50px', overflowY: 'auto', height: '100%', boxSizing: 'border-box' },
     container: {
         width: '816px',
         height: '1056px',
