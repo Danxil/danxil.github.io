@@ -22,7 +22,7 @@ function App() {
   const [myCodeOpen, setMyCodeOpen] = useState(false);
 
   const { data: casesData } = useQuery<CaseType[]>("cases", async () => {
-    const result = await client.fetch('*[_type == "case"]');
+    const result = await client.fetch('*[_type == "case"] | order(_createdAt asc)');
 
     return result;
   });
