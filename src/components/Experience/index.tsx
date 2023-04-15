@@ -22,15 +22,12 @@ const Experience = ({ data }: { data: ExperienceType[] }) => {
         }, HOME_PRESENT_DELAY - 100)
     }, [data]);
 
-
-    console.log(11, listRef);
-
     return (
         <div className={styles.container} ref={containerRef}>
             {
                 data.map((data, i) => (
                     <ExperienceItem
-                        key={createHash(`${data.company}${data.description}`)}
+                        key={createHash(`${data.company}${data.projects[0]?.startDate}`)}
                         data={data}
                         ref={(item: RefType) => {
                             if (!item) return;
