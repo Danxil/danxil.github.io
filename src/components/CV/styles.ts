@@ -5,8 +5,8 @@ const BORDER_COLOR = '#d9d9d9'
 const styles: { [key: string]: CSSProperties } = {
     bg: { backgroundColor: 'gray', padding: '0 50px', overflowY: 'auto', height: '100%', boxSizing: 'border-box' },
     container: {
-        width: '816px',
-        height: '1056px',
+        width: '1016px',
+        height: '1256px',
         margin: '0 auto',
         padding: '15px 20px',
         backgroundColor: 'white',
@@ -52,10 +52,12 @@ const styles: { [key: string]: CSSProperties } = {
         textAlign: 'right'
     },
     dateRange: {
+        marginTop: '5px',
         fontStyle: 'italic',
         fontSize: '10px',
         textAlign: 'right',
-        marginTop: '-2px'
+        display: 'flex',
+        justifyContent: 'space-between'
     },
     role: {
         fontWeight: 'bold',

@@ -37,9 +37,10 @@ const CV = ({ experience, skills, meta }: { experience: ExperienceType[], skills
                 <div style={styles.left}>
                     <h1>Vadym Bondarenko</h1>
                     <div style={styles.contacts}>
-                        <div>Tulsa, USA</div>
-                        <div>+1 (539) 292-3558</div>
-                        <div>vadym.bondarenko.ggggaa@gmail.com</div>
+                        <p><b>Location:</b> Tulsa (OK), USA</p>
+                        <p><b>Imigration status:</b> Green Card (sponsorship is not required)</p>
+                        <p><b>Phone:</b> +1 (539) 292-3558</p>
+                        <p><b>Email:</b> vadym.bondarenko.ggggaa@gmail.com</p>
                     </div>
                     <div style={styles.slogan}>I have been working in software development since 2012</div>
                     <div style={styles.myCode}>
@@ -81,16 +82,21 @@ const CV = ({ experience, skills, meta }: { experience: ExperienceType[], skills
                                         <span style={styles.companyTitle}>{company}</span>
                                     </div>
                                     <div style={styles.dateRange}>
-                                        {moment(dateStart).format(DATE_FORMAT)} - {moment(dateEnd).format(DATE_FORMAT)}
+                                        <div>
+                                            Start date: {moment(dateStart).format(DATE_FORMAT)}
+                                        </div>
+                                        <div>
+                                            End date: {moment(dateEnd).format(DATE_FORMAT)}
+                                        </div>
                                     </div>
                                     <div>
                                         <div style={styles.tags}>
-                                            {
+                                            <b>Used technologies:</b> {
                                                 tags.map((tag, index) => <span style={styles.tag}>{tag}{index !== tags.length - 1 ? ', ' : ''}</span>)
                                             }
                                         </div>
                                     </div>
-                                    <div style={styles.detailsLink}><b>Details:</b> <i>{getExperienceLink(company)}</i></div>
+                                    <div style={styles.detailsLink}><b>Details on my website:</b> <i>{getExperienceLink(company)}</i></div>
                                 </div>
                             ))
                         }
