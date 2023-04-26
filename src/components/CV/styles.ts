@@ -46,10 +46,10 @@ const styles: { [key: string]: CSSProperties } = {
         fontSize: '11px',
         fontStyle: 'italic'
     },
+    experienceLabel: {
+    },
     companyTitle: {
         fontSize: '13px',
-        fontWeight: 'bold',
-        textAlign: 'right'
     },
     dateRange: {
         marginTop: '5px',
@@ -57,11 +57,12 @@ const styles: { [key: string]: CSSProperties } = {
         fontSize: '10px',
         textAlign: 'right',
         display: 'flex',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        flexDirection: 'column'
     },
     role: {
-        fontWeight: 'bold',
         fontSize: '16px',
+        marginBottom: '5px'
     },
     experienceItem: {
         marginTop: '15px',
@@ -73,6 +74,7 @@ const styles: { [key: string]: CSSProperties } = {
     },
     companyHeader: {
         display: 'flex',
+        flexDirection: 'row',
         justifyContent: 'space-between'
     },
     detailsLink: {
@@ -109,7 +111,6 @@ const styles: { [key: string]: CSSProperties } = {
     },
     education: {
         wordBreak: 'break-word',
-        fontSize: '10px',
         marginTop: '20px',
     }
 }

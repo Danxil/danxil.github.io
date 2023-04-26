@@ -47,6 +47,7 @@ const CV = ({ experience, skills, meta }: { experience: ExperienceType[], skills
                         <b>My code:</b> <i>{window.location.origin}</i>
                     </div>
                     <div style={styles.summary}>
+                        <h1>Summary</h1>
                         <PortableText value={meta.summary} />
                     </div>
                     <div style={styles.skills}>
@@ -67,19 +68,21 @@ const CV = ({ experience, skills, meta }: { experience: ExperienceType[], skills
                             ))
                         }
                     </div>
-                    <div style={styles.education}>
-                        <h1>Education</h1>
-                        <PortableText value={meta.education} />
-                    </div>
                 </div>
                 <div style={styles.right}>
                     <h1>Experience</h1>
-                        {
-                            experienceToRender.map(({ company, description, projects, tags, roles, dateStart, dateEnd }, index) => (
-                                <div style={{ ...styles.experienceItem}}>
-                                    <div style={styles.companyHeader}>
-                                        <span style={styles.role}>{roles.join(', ')}</span>
-                                        <span style={styles.companyTitle}>{company}</span>
+                    {
+                        experienceToRender.map(({ company, description, projects, tags, roles, dateStart, dateEnd }, index) => (
+                            <div style={{ ...styles.experienceItem}}>
+                                <div style={styles.companyHeader}>
+                                    <div>
+                                        <div style={styles.role}>
+                                            <span style={styles.experienceLabel}>Role: </span>
+                                            <b>{roles.join(', ')}</b>
+                                        </div>
+                                        <div style={styles.companyTitle}>
+                                            <span style={styles.experienceLabel}>Company: </span><b>{company}</b>
+                                        </div>
                                     </div>
                                     <div style={styles.dateRange}>
                                         <div>
@@ -89,17 +92,22 @@ const CV = ({ experience, skills, meta }: { experience: ExperienceType[], skills
                                             End date: {moment(dateEnd).format(DATE_FORMAT)}
                                         </div>
                                     </div>
-                                    <div>
-                                        <div style={styles.tags}>
-                                            <b>Used technologies:</b> {
-                                                tags.map((tag, index) => <span style={styles.tag}>{tag}{index !== tags.length - 1 ? ', ' : ''}</span>)
-                                            }
-                                        </div>
-                                    </div>
-                                    <div style={styles.detailsLink}><b>Details on my website:</b> <i>{getExperienceLink(company)}</i></div>
                                 </div>
-                            ))
-                        }
+                                <div>
+                                    <div style={styles.tags}>
+                                        <b>Used technologies:</b> {
+                                            tags.map((tag, index) => <span style={styles.tag}>{tag}{index !== tags.length - 1 ? ', ' : ''}</span>)
+                                        }
+                                    </div>
+                                </div>
+                                <div style={styles.detailsLink}><b>Details on my website:</b> <i>{getExperienceLink(company)}</i></div>
+                            </div>
+                        ))
+                    }
+                    <div style={styles.education}>
+                        <h1>Education</h1>
+                        <PortableText value={meta.education} />
+                    </div>
                         </div>
                     </div>
                 <div>
