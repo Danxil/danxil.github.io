@@ -37,14 +37,7 @@ const CV = ({ experience, skills, meta }: { experience: ExperienceType[], skills
                 <div style={styles.left}>
                     <h1>Vadym Bondarenko</h1>
                     <div style={styles.contacts}>
-                        <p><b>Location:</b> Tulsa (OK), USA</p>
-                        <p><b>Imigration status:</b> Green Card (sponsorship is not required)</p>
-                        <p><b>Phone:</b> +1 (539) 292-3558</p>
-                        <p><b>Email:</b> vadym.bondarenko.ggggaa@gmail.com</p>
-                    </div>
-                    <div style={styles.slogan}>I have been working in software development since 2012</div>
-                    <div style={styles.myCode}>
-                        <b>My code:</b> <i>{window.location.origin}</i>
+                        <PortableText value={meta.topInfo} />
                     </div>
                     <div style={styles.summary}>
                         <h1>Summary</h1>

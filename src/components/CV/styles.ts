@@ -111,6 +111,7 @@ const styles: { [key: string]: CSSProperties } = {
     },
     education: {
         wordBreak: 'break-word',
+        fontSize: '10px',
         marginTop: '20px',
     }
 }

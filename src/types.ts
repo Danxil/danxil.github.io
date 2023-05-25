@@ -33,5 +33,6 @@ export type SkillsType = {
 export type MetaType = {
     summary: [],
     lookingFor: []
-    education: []
+    education: [],
+    topInfo: [],
 }
