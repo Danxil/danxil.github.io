@@ -24,7 +24,7 @@ const getExperienceLink = (company: string) => `${window.location.origin}?scroll
 
 const { params: { cvType } } = getActivePage();
 
-const longCvType = cvType === 'long';
+const longCvType = cvType !== 'short';
 
 const portableTextComponents = {
     types: {
@@ -42,8 +42,6 @@ const CV = ({ experience, skills, meta }: { experience: ExperienceType[], skills
         dateEnd: exp.projects.map(proj => proj.endDate).filter(onlyUnique).sort((a, b) => b > a ? 1 : -1)[0],
         responsibilities: exp.projects.map(proj => proj.responsibilities).flat().filter(onlyUnique),
     })), [])
-
-    console.log('longCvType', longCvType)
 
     return <div style={styles.bg}>
         <div style={styles.container}>
