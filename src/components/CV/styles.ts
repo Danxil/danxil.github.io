@@ -6,17 +6,19 @@ const styles: { [key: string]: CSSProperties } = {
     bg: { backgroundColor: 'gray', padding: '0 50px', overflowY: 'auto', height: '100%', boxSizing: 'border-box' },
     container: {
         width: '1016px',
-        height: '1256px',
         margin: '0 auto',
         padding: '15px 20px',
         backgroundColor: 'white',
         fontSize: '12px',
         boxSizing: 'border-box'
     },
+    containerShort: {
+        height: '1256px',
+    },
     summary: {
         fontSize: '11px',
     },
-    columns: {
+    columnsShort: {
         display: 'flex',
         justifyContent: 'space-between',
     },
@@ -72,6 +74,10 @@ const styles: { [key: string]: CSSProperties } = {
         flexDirection: 'column',
         borderTop: `1px solid ${BORDER_COLOR}`,
     },
+    longExperienceItem: {
+        paddingTop: '30px',
+        marginTop: '30px',
+    },
     companyHeader: {
         display: 'flex',
         flexDirection: 'row',
@@ -113,7 +119,10 @@ const styles: { [key: string]: CSSProperties } = {
         wordBreak: 'break-word',
         fontSize: '10px',
         marginTop: '20px',
-    }
+    },
+    responsibilities: {
+        marginTop: '25px',
+    },
 }
 
 export default styles;

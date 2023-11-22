@@ -128,7 +128,7 @@ function App() {
       
     }, HOME_PRESENT_DELAY)
   }, []);
-
+  
   if (currentPage.page === 'cv') {
     if (!experienceData || !slillsData || !metaData) return null;
     else return <CV experience={experienceData || []} skills={slillsData}  meta={metaData} />;
